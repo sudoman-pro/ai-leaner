@@ -1,9 +1,5 @@
-import React from 'react'
+import { SignUp } from "@clerk/clerk-react";
 
-const Register = () => {
-  return (
-    <div>Register</div>
-  )
+export default function Register() {
+  return <SignUp path="/register" routing="path" />;
 }
-
-export default Register

@@ -1,9 +1,14 @@
-import React from 'react'
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
-const Dashboard = () => {
+export default function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+      <SignedIn>
+        <h1>Dashboard - You are signed in!</h1>
+      </SignedIn>
+    </>
+  );
 }
-
-export default Dashboard
